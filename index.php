@@ -19,17 +19,19 @@
     </header>
 
     <main class="main-content">
-        <ul class="album-list">
-            <?php foreach ($database as $album) { ?>
-                <li>
-                    <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
-                    <h2><?php echo $album['title'] ?></h2>
-                    <h3><?php echo $album['author'] ?></h3>
-                    <h4><?php echo $album['year'] ?></h4>
-                    <h5><?php echo $album['genre'] ?></h5>
-                </li>
-            <?php } ?>
-        </ul>
+        <div class="container">
+            <ul class="album-list">
+                <?php foreach ($database as $album) { ?>
+                    <li>
+                        <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
+                        <h2><?php echo $album['title'] ?></h2>
+                        <h3><?php echo $album['author'] ?></h3>
+                        <h4><?php echo $album['year'] ?></h4>
+                        <h5><?php echo $album['genre'] ?></h5>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
     </main>
     
 </body>
