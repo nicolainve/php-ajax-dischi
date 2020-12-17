@@ -27,7 +27,7 @@
                         <h2><?php echo $album['title'] ?></h2>
                         <h3><?php echo $album['author'] ?></h3>
                         <h4><?php echo $album['year'] ?></h4>
-                        <h5><?php echo $album['genre'] ?></h5>
+                        <h3><?php echo $album['genre'] ?></h3>
                     </li>
                 <?php } ?>
             </ul>

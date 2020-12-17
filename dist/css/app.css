@@ -4,34 +4,37 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 35px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #182d3d;
-  font-size: 16px;
 }
 
 h2 {
   color: #fff;
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 
 h3 {
   color: #fff;
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 0.3333333333rem;
 }
 
 h4 {
   color: #fff;
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 0.25rem;
 }
 
 h5 {
   color: #fff;
   margin: 10px 0;
-  font-size: 1rem;
+  font-size: 0.2rem;
 }
 
 ul {
@@ -62,12 +65,12 @@ ul {
 .album-list li {
   flex-basis: calc(100% / 3 - 80px);
   margin: 40px 30px;
-  padding: 20px 0;
+  padding: 20px 10px;
   background: #000;
   text-align: center;
 }
 
 .album-list li img {
-  width: calc(100% - 60px);
+  width: calc(100% - 40px);
 }
 

@@ -4,17 +4,20 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 35px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #182d3d;
-    font-size: 16px;
 }
 
 @for $i from 2 through 5 {
     h#{$i} {
         color: #fff;
         margin: 10px 0;
-        font-size: 1rem;
+        font-size: 1rem / $i;
     }
 }
 
@@ -43,11 +46,11 @@ ul {
     li {
         flex-basis: calc(100% / 3 - 80px);
         margin: 40px 30px;
-        padding: 20px 0;
+        padding: 20px 10px;
         background: #000;
         text-align: center;
         img {
-            width: calc(100% - 60px);
+            width: calc(100% - 40px);
         }
     }
 }
