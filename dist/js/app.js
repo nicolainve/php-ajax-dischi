@@ -14425,7 +14425,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   data: {
     cds: [],
     filters: [],
-    actualGenre: ''
+    actualAuthor: ''
   },
   created: function created() {
     var _this = this;
@@ -14434,8 +14434,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
       _this.cds = response.data;
 
       _this.cds.forEach(function (element) {
-        if (!_this.filters.includes(element['genre'])) {
-          _this.filters.push(element['genre']);
+        if (!_this.filters.includes(element['author'])) {
+          _this.filters.push(element['author']);
         }
       });
     })["catch"](function (error) {
@@ -14448,7 +14448,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
 
       axios__WEBPACK_IMPORTED_MODULE_1___default.a.get(window.location.href + 'script/script-json.php', {
         params: {
-          genre: this.actualGenre
+          author: this.actualAuthor
         }
       }).then(function (response) {
         _this2.cds = response.data;

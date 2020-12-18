@@ -21,7 +21,7 @@
             <div class="container">
                 <div class="filter-sel">
                     <label for="filter">Filter</label>
-                    <select v-model="actualGenre" id="filter" @change="filter">
+                    <select v-model="actualAuthor" id="filter" @change="filter">
                         <option value="">All</option>
                         <option v-for="filter in filters" :value="filter">{{ filter }}</option>
                     </select>

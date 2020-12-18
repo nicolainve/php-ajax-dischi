@@ -6,15 +6,15 @@ const app = new Vue ({
     data: {
         cds: [],
         filters: [],
-        actualGenre: ''
+        actualAuthor: ''
     },
     created() {
         axios.get(window.location.href + 'script/script-json.php')
         .then(response => {
             this.cds = response.data;
             this.cds.forEach(element => {
-                if (!this.filters.includes(element['genre'])) {
-                    this.filters.push(element['genre'])
+                if (!this.filters.includes(element['author'])) {
+                    this.filters.push(element['author'])
                 }
             })
         })
@@ -26,7 +26,7 @@ const app = new Vue ({
         filter() {
             axios.get(window.location.href + 'script/script-json.php', {
                 params: {
-                    genre: this.actualGenre
+                    author: this.actualAuthor
                 }
             })
         .then(response => {
