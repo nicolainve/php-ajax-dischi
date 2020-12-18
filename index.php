@@ -10,8 +10,6 @@
 
 <body>
 
-    <?php include __DIR__ . '/database.php' ?>
-
     <header class="main-header">
         <div class="container">
             <img src="./images/logo.png" alt="Spotify">
@@ -20,19 +18,19 @@
 
     <main class="main-content">
         <div class="container">
-            <ul class="album-list">
-                <?php foreach ($database as $album) { ?>
-                    <li>
-                        <img src="<?php echo $album['poster'] ?>" alt="<?php echo $album['title'] ?>">
-                        <h2><?php echo $album['title'] ?></h2>
-                        <h3><?php echo $album['author'] ?></h3>
-                        <h4><?php echo $album['year'] ?></h4>
-                        <h3><?php echo $album['genre'] ?></h3>
+            <ul id="app" class="album-list">
+                    <li v-for="cd in cds">
+                        <img :src="cd.poster" alt="cd.title">
+                        <h2>{{ cd.title }}</h2>
+                        <h3>{{ cd.author }}</h3>
+                        <h4>{{ cd.year }}</h4>
+                        <h3>{{ cd.genre }}</h3>
                     </li>
-                <?php } ?>
             </ul>
         </div>
     </main>
+
+    <script src="./dist/js/app.js"></script>
     
 </body>
 </html>
