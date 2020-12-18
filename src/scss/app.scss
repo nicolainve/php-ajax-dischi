@@ -11,11 +11,11 @@ html {
 body {
     font-family: Arial, sans-serif;
     background: #182d3d;
+    color: #fff;
 }
 
 @for $i from 2 through 5 {
     h#{$i} {
-        color: #fff;
         margin: 10px 0;
         font-size: 1rem / $i;
     }
@@ -35,22 +35,62 @@ ul {
     background: #132431;
     img {
         width: 50px;
+        cursor: pointer;
     }
 }
 
-.album-list {
-    padding: 30px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    li {
-        flex-basis: calc(100% / 3 - 80px);
-        margin: 40px 30px;
-        padding: 20px 10px;
+.main-content {
+    .filter-sel {
+        position: relative;
+        width: 150px;
+        height: 50px;
+        margin: 30px auto 0px;
+        border-radius: 25px;
+        overflow: hidden;
         background: #000;
+        border: 5px solid #000;
+        padding-left: 12.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        label {
+            font-size: .5rem;
+        }
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            width: 55%;
+            height: 100%;
+            border-radius: 25px;
+            text-align: center;
+            background: #132431;
+            color: #fff;
+            outline: none;
+            font-size: 0.5rem;
+            border: none;
+            transition: .4s;
+            &:hover {
+                background: rgba(#fff, .9);
+                color: #132431;
+            }
+        }
+    }
+    .album-list {
         text-align: center;
-        img {
-            width: calc(100% - 40px);
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            flex-basis: calc(100% / 3 - 80px);
+            margin: 40px 30px;
+            padding: 20px 10px;
+            background: #000;
+            img {
+                width: calc(100% - 40px);
+            }
         }
     }
 }

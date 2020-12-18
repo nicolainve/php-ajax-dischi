@@ -13,16 +13,19 @@
     <div id="app">
         <header class="main-header">
             <div class="container">
-                <img src="./images/logo.png" alt="Spotify">
+                <a href="./"><img src="./images/logo.png" alt="Spotify"></a>
             </div>
         </header>
     
         <main class="main-content">
             <div class="container">
-                <select v-model="actualGenre" id="filter" @change="filter">
-                    <option value="">All</option>
-                    <option v-for="filter in filters" :value="filter">{{ filter }}</option>
-                </select>
+                <div class="filter-sel">
+                    <label for="filter">Filter</label>
+                    <select v-model="actualGenre" id="filter" @change="filter">
+                        <option value="">All</option>
+                        <option v-for="filter in filters" :value="filter">{{ filter }}</option>
+                    </select>
+                </div>
                 <ul class="album-list">
                         <li v-for="cd in cds">
                             <img :src="cd.poster" alt="cd.title">
